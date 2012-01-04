@@ -1,0 +1,63 @@
+" Tabs/spaces
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
+set expandtab
+
+" no fold by default
+set nofoldenable
+
+" ,a to search
+map <leader>a :Ack 
+
+" Edit/reload .vimrc
+nmap <leader>ev :e $MYVIMRC<cr>
+nmap <leader>rv :source $MYVIMRC<cr>
+
+" add beams etc to useless file list
+set wildignore+=*.beam,*.dump,*~,*.o,.git,*.png,*.jpg,*.gif
+
+set encoding=utf-8
+"
+" Use the same symbols as TextMate for tabstops and EOLs
+set list
+set listchars=tab:▸\ ,eol:¬
+
+" Color scheme (terminal)
+syntax on
+set background=dark
+colorscheme molokai
+" colorscheme delek
+
+" NERD Tree
+map <F2> :NERDTreeToggle<cr>
+let NERDTreeIgnore=['\.beam$', '\.dump$', '\~$', '^\.']
+
+set colorcolumn=80
+
+let g:erl_author="Richard Jones <rj@metabrew.com>"
+let g:erl_company="IRCCloud Ltd."
+let g:erl_replace_buffer=1
+let g:erlangManPath="/usr/local/Cellar/erlang/HEAD/share/man"
+"let g:erl_tpl_dir="/Users/rj/.vim/bundle/erlang-skel/plugin/templates/"
+
+
+if has('gui_running')
+    set guifont=Menlo:h14
+    colorscheme molokai
+    set background=dark
+    set go-=T
+    set go-=l
+    set go-=L
+    set go-=r
+    set go-=R
+    if has("gui_macvim")
+        " Full screen on macvim should fully maxed out
+        set fuopt=maxvert,maxhorz
+        "macmenu &File.New\ Tab key=<nop>
+        "map <leader>t <Plug>PeepOpen
+    end
+    "let g:sparkupExecuteMapping = '<D-e>'
+    "highlight SpellBad term=underline gui=undercurl guisp=Orange
+endif
+
