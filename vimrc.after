@@ -18,7 +18,12 @@ nmap <leader>rv :source $MYVIMRC<cr>
 set wildignore+=*.beam,*.dump,*~,*.o,.git,*.png,*.jpg,*.gif
 
 set encoding=utf-8
-"
+
+" Fuck you, help key.
+inoremap <F1> <ESC>:set invfullscreen<CR>a
+nnoremap <F1> :set invfullscreen<CR>
+vnoremap <F1> :set invfullscreen<CR>
+
 " Use the same symbols as TextMate for tabstops and EOLs
 set list
 set listchars=tab:▸\ ,eol:¬
