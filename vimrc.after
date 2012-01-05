@@ -19,10 +19,21 @@ set wildignore+=*.beam,*.dump,*~,*.o,.git,*.png,*.jpg,*.gif
 
 set encoding=utf-8
 
+" tripple escape closes buffer
+map <esc><esc><esc> :bd<cr>
+imap <esc><esc><esc> :bd<cr>
+
 " Fuck you, help key.
 inoremap <F1> <ESC>:set invfullscreen<CR>a
 nnoremap <F1> :set invfullscreen<CR>
 vnoremap <F1> :set invfullscreen<CR>
+
+" Easier buffer navigation
+map <C-h> <C-w>h
+map <C-j> <C-w>j
+map <C-k> <C-w>k
+map <C-l> <C-w>l
+map <leader>w <C-w>v<C-w>l
 
 " Use the same symbols as TextMate for tabstops and EOLs
 set list
@@ -61,6 +72,8 @@ if has('gui_running')
         set fuopt=maxvert,maxhorz
         "macmenu &File.New\ Tab key=<nop>
         "map <leader>t <Plug>PeepOpen
+    else
+        set guifont=DejaVu\ Sans\ Mono\ 13
     end
     "let g:sparkupExecuteMapping = '<D-e>'
     "highlight SpellBad term=underline gui=undercurl guisp=Orange
