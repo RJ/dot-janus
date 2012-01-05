@@ -75,3 +75,21 @@ if has('gui_running')
     "highlight SpellBad term=underline gui=undercurl guisp=Orange
 endif
 
+" Use omni completion if module_name:something, for erlang:
+" (by default, supertab uses . :: ->, but not a single :
+function SuperErlangContext()
+    let exclusions = exists('g:SuperTabContextTextFileTypeExclusions') ?
+        \ g:SuperTabContextTextFileTypeExclusions : []
+    if index(exclusions, &ft) == -1
+        let curline = getline('.')
+        let cnum = col('.')
+        let synname = synIDattr(synID(line('.'), cnum - 1, 1), 'name')
+        if curline =~ '.*\(\w\|[\])]\)\(:\)\w*\%' . cnum . 'c' && synname !~ '\(String\|Comment\)'
+            return "\<c-x>\<c-o>"
+        endif
+    endif
+    " no return will result in the evaluation of the next
+    " configured context
+endfunction
+let g:SuperTabDefaultCompletionType = "context"
+let g:SuperTabCompletionContexts = ['SuperErlangContext', 's:ContextText', 's:ContextDiscover']
