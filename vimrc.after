@@ -10,10 +10,6 @@ set nofoldenable
 " ,a to search
 map <leader>a :Ack 
 
-" Edit/reload .vimrc
-nmap <leader>ev :e $MYVIMRC<cr>
-nmap <leader>rv :source $MYVIMRC<cr>
-
 " add beams etc to useless file list
 set wildignore+=*.beam,*.dump,*~,*.o,.git,*.png,*.jpg,*.gif
 
