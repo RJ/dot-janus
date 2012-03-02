@@ -1,6 +1,3 @@
 [submodule "vimerl"]
 	path = vimerl
 	url = https://github.com/RJ/vimerl.git
-[submodule "TabBar"]
-	path = TabBar
-	url = https://github.com/vim-scripts/TabBar.git

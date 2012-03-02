@@ -10,6 +10,9 @@ set nofoldenable
 " ,a to search
 map <leader>a :Ack 
 
+" ,<space> clears search result highlights etc
+map <leader><space> :let @/=''<cr>
+
 " add beams etc to useless file list
 set wildignore+=*.beam,*.dump,*~,*.o,.git,*.png,*.jpg,*.gif
 
@@ -93,3 +96,8 @@ function SuperErlangContext()
 endfunction
 let g:SuperTabDefaultCompletionType = "context"
 let g:SuperTabCompletionContexts = ['SuperErlangContext', 's:ContextText', 's:ContextDiscover']
+
+" no man page erlang completion:
+let g:erlangCompletionDisplayDoc = 0
+
+
