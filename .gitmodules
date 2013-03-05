@@ -1,3 +1,12 @@
 [submodule "vimerl"]
 	path = vimerl
-	url = https://github.com/RJ/vimerl.git
+  url = https://github.com/jimenezrick/vimerl.git
+[submodule "python-mode"]
+	path = python-mode
+	url = git://github.com/klen/python-mode.git
+[submodule "vim-golang"]
+	path = vim-golang
+	url = https://github.com/jnwhiteh/vim-golang.git
+[submodule "vim-gitgutter"]
+	path = vim-gitgutter
+	url = git://github.com/airblade/vim-gitgutter.git

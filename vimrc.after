@@ -32,7 +32,6 @@ map <C-h> <C-w>h
 map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
-map <leader>w <C-w>v<C-w>l
 
 " Use the same symbols as TextMate for tabstops and EOLs
 set list
@@ -46,15 +45,17 @@ colorscheme molokai
 
 " NERD Tree
 map <F2> :NERDTreeToggle<cr>
-let NERDTreeIgnore=['\.beam$', '\.dump$', '\~$', '^\.']
+let NERDTreeIgnore=['\.beam$', '\.dump$', '\.pyc', '\~$', '^\.']
 
 set colorcolumn=80
 
-let g:erl_author="Richard Jones <rj@metabrew.com>"
-let g:erl_company="IRCCloud Ltd."
-let g:erl_replace_buffer=1
-let g:erlangManPath="/usr/local/Cellar/erlang/HEAD/share/man"
+let erlang_skel_header = { "author": "Richard Jones", "owner" : "IRCCloud Ltd." }
+"let g:erl_author="Richard Jones <rj@metabrew.com>"
+"let g:erl_company="IRCCloud Ltd."
+"let g:erl_replace_buffer=1
+let g:erlangManPath="/usr/local/Cellar/erlang/R15B01/share/man"
 "let g:erl_tpl_dir="/Users/rj/.vim/bundle/erlang-skel/plugin/templates/"
+let erlang_skel_dir = "~/.janus/plugin/erlang_skels"
 
 
 if has('gui_running')

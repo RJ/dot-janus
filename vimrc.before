@@ -4,3 +4,6 @@ let mapleader = ","
 call janus#disable_plugin('nodejs')
 
 call janus#disable_plugin('tabbar')
+
+" Fix easymotion leader key
+let g:EasyMotion_leader_key = '<Leader>'
