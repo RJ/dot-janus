@@ -10,3 +10,6 @@
 [submodule "vim-gitgutter"]
 	path = vim-gitgutter
 	url = git://github.com/airblade/vim-gitgutter.git
+[submodule "vim-instant-markdown"]
+	path = vim-instant-markdown
+	url = https://github.com/suan/vim-instant-markdown.git

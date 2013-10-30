@@ -14,7 +14,7 @@ map <leader>a :Ack
 map <leader><space> :let @/=''<cr>
 
 " add beams etc to useless file list
-set wildignore+=*.beam,*.dump,*~,*.o,.git,*.png,*.jpg,*.gif
+set wildignore+=*.beam,*.dump,*~,*.o,.git,*.png,*.jpg,*.gif,^_rel/*
 
 set encoding=utf-8
 
@@ -45,7 +45,7 @@ colorscheme molokai
 
 " NERD Tree
 map <F2> :NERDTreeToggle<cr>
-let NERDTreeIgnore=['\.beam$', '\.dump$', '\.pyc', '\~$', '^\.']
+let NERDTreeIgnore=['\.beam$', '\.dump$', '\.pyc', '\~$', '^\.', '^rel\/.*']
 
 set colorcolumn=80
 
