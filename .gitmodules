@@ -1,6 +1,7 @@
 [submodule "vimerl"]
 	path = vimerl
-  url = https://github.com/jimenezrick/vimerl.git
+	url = https://github.com/RJ/vimerl.git
+    #url = https://github.com/jimenezrick/vimerl.git
 [submodule "python-mode"]
 	path = python-mode
 	url = git://github.com/klen/python-mode.git
