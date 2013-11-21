@@ -14,3 +14,15 @@
 [submodule "vim-instant-markdown"]
 	path = vim-instant-markdown
 	url = https://github.com/suan/vim-instant-markdown.git
+[submodule "vim-erlang-skeletons"]
+	path = vim-erlang-skeletons
+	url = https://github.com/vim-erlang/vim-erlang-skeletons.git
+[submodule "vim-erlang-runtime"]
+	path = vim-erlang-runtime
+	url = https://github.com/vim-erlang/vim-erlang-runtime.git
+[submodule "vim-erlang-tags"]
+	path = vim-erlang-tags
+	url = https://github.com/vim-erlang/vim-erlang-tags.git
+[submodule "vim-erlang-omnicomplete"]
+	path = vim-erlang-omnicomplete
+	url = https://github.com/vim-erlang/vim-erlang-omnicomplete.git

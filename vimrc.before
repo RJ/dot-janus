@@ -7,3 +7,5 @@ call janus#disable_plugin('tabbar')
 
 " Fix easymotion leader key
 let g:EasyMotion_leader_key = '<Leader>'
+let g:erlang_tags_ignore="'_rel/**'"
+
