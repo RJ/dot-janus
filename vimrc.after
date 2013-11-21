@@ -43,6 +43,8 @@ set background=dark
 colorscheme molokai
 " colorscheme delek
 
+map <F3> :BuffergatorToggle<cr>
+
 " NERD Tree
 map <F2> :NERDTreeToggle<cr>
 let NERDTreeIgnore=['\.beam$', '\.dump$', '\.pyc', '\~$', '^\.', '^rel\/.*']
