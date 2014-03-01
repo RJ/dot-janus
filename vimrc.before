@@ -1,4 +1,5 @@
 let mapleader = ","
+let g:instant_markdown_slow = 1
 
 " Since system-wide plugin conflicts/doesn't protect itself:
 call janus#disable_plugin('nodejs')
