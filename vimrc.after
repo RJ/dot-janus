@@ -4,6 +4,11 @@ set shiftwidth=4
 set softtabstop=4
 set expandtab
 
+" keep blocks selected when indenting
+vnoremap < <gv
+vnoremap > >gv
+
+
 " no fold by default
 set nofoldenable
 
@@ -14,7 +19,7 @@ map <leader>a :Ack
 map <leader><space> :let @/=''<cr>
 
 " add beams etc to useless file list
-set wildignore+=*.beam,*.dump,*~,*.o,.git,*.png,*.jpg,*.gif,^_rel/*
+set wildignore+=*.beam,*.dump,*~,*.o,.git,*.png,*.jpg,*.gif,_rel*
 
 set encoding=utf-8
 

@@ -26,3 +26,6 @@
 [submodule "vim-erlang-omnicomplete"]
 	path = vim-erlang-omnicomplete
 	url = https://github.com/vim-erlang/vim-erlang-omnicomplete.git
+[submodule "airline"]
+	path = airline
+	url = https://github.com/bling/vim-airline.git
