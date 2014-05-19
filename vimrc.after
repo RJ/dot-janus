@@ -23,7 +23,49 @@ set wildignore+=*.beam,*.dump,*~,*.o,.git,*.png,*.jpg,*.gif,_rel*
 
 set encoding=utf-8
 
-" tripple escape closes buffer
+augroup myfiletypes
+  autocmd!
+  autocmd BufNewFile,BufRead *.jinja        set filetype=jinja
+  autocmd BufNewFile,BufRead *.sql          set filetype=psql
+  autocmd BufNewFile,BufRead *.migration    set filetype=psql
+  autocmd BufNewFile,BufRead *.vcl          set filetype=vcl
+  autocmd BufNewFile,BufRead *.json         set filetype=json
+  autocmd BufNewFile,BufRead *.mkd,*.md     set filetype=mkd ai formatoptions=tcroqn2
+
+  " go to beginning, insert boilerplate, then line 2
+  autocmd BufNewFile *.py                   0r ~/.janus/python-boilerplate.py
+  autocmd BufNewFile *.py                   2
+
+  " autoindent with two spaces, always expand tabs
+  autocmd FileType ruby,eruby,yaml          set ai sw=2 sts=2 et
+  " Over-length highlighting (110 chars)
+  autocmd FileType python highlight link OverLength SpellBad
+  autocmd FileType python match OverLength /\%111v.\+/
+  autocmd FileType python set ai sw=4 sts=4 et
+augroup END
+
+" Python stuff
+let python_highlight_all=1
+let g:syntastic_python_flake8_args='--max-complexity=10 --max-line-length=110 --ignore=W191'
+let g:syntastic_python_checkers=['flake8']
+let g:syntastic_check_on_open=1
+let g:syntastic_enable_signs=0
+
+set viminfo='20,\"1000
+
+" unicode symbols
+let g:airline_left_sep = '»'
+let g:airline_left_sep = '▶'
+let g:airline_right_sep = '«'
+let g:airline_right_sep = '◀'
+"let g:airline_symbols.linenr = '¶'
+"let g:airline_symbols.branch = '⎇'
+"let g:airline_symbols.paste = 'ρ'
+"let g:airline_symbols.paste = 'Þ'
+"let g:airline_symbols.paste = '∥'
+"let g:airline_symbols.whitespace = 'Ξ'
+
+" triple escape closes buffer
 map <esc><esc><esc> :bd<cr>
 imap <esc><esc><esc> :bd<cr>
 
@@ -102,7 +144,7 @@ endif
     " no return will result in the evaluation of the next
     " configured context
 "endfunction
-"let g:SuperTabDefaultCompletionType = "context"
+let g:SuperTabDefaultCompletionType = "context"
 "let g:SuperTabCompletionContexts = ['SuperErlangContext', 's:ContextText', 's:ContextDiscover']
 
 " no man page erlang completion:

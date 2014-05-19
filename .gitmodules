@@ -29,3 +29,6 @@
 [submodule "airline"]
 	path = airline
 	url = https://github.com/bling/vim-airline.git
+[submodule "vim-airline"]
+	path = vim-airline
+	url = https://github.com/bling/vim-airline
