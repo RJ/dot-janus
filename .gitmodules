@@ -32,3 +32,9 @@
 [submodule "vim-airline"]
 	path = vim-airline
 	url = https://github.com/bling/vim-airline
+[submodule "vim-bracketed-paste"]
+	path = vim-bracketed-paste
+	url = https://github.com/ConradIrwin/vim-bracketed-paste.git
+[submodule "vim-ref"]
+	path = vim-ref
+	url = https://github.com/thinca/vim-ref.git

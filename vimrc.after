@@ -4,6 +4,9 @@ set shiftwidth=4
 set softtabstop=4
 set expandtab
 
+" xd to delete line, yanking to blackhole register (doesn't replace clipboard)
+map xd "_dd
+
 " keep blocks selected when indenting
 vnoremap < <gv
 vnoremap > >gv
