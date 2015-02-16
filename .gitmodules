@@ -1,7 +1,3 @@
-[submodule "vimerl"]
-	path = vimerl
-	url = https://github.com/RJ/vimerl.git
-    #url = https://github.com/jimenezrick/vimerl.git
 [submodule "python-mode"]
 	path = python-mode
 	url = git://github.com/klen/python-mode.git
@@ -26,9 +22,6 @@
 [submodule "vim-erlang-omnicomplete"]
 	path = vim-erlang-omnicomplete
 	url = https://github.com/vim-erlang/vim-erlang-omnicomplete.git
-[submodule "airline"]
-	path = airline
-	url = https://github.com/bling/vim-airline.git
 [submodule "vim-airline"]
 	path = vim-airline
 	url = https://github.com/bling/vim-airline
